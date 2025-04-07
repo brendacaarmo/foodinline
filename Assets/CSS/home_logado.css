@@ -1,0 +1,170 @@
+/* Importando a fonte Lato */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #e9ecef;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    width: 100vw; /* Garante que ocupa toda a largura */
+}
+
+/* Sidebar fixa na esquerda */
+.sidebar {
+    width: 280px;
+    background-color: white;
+    padding: 20px;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para o fim */
+}
+
+/* Estilização do título da sidebar */
+.sidebar h2 {
+    color: #fd7e14;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilização da navegação */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a::before {
+    content: "➤";
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Ajuste do botão de deslogar */
+.logout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #c05600;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: auto; /* Empurra para o final da sidebar */
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Conteúdo principal */
+.content {
+    margin: 0 20px;
+    padding: 20px;
+    width: calc(100% - 270px); /* Ocupa o espaço restante */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+.header {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.header img {
+    max-width: 170px;
+    display: block;
+}
+
+/* Dashboard */
+.dashboard {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Para ocupar toda a largura disponível */
+}
+
+.dashboard h1 {
+    font-size: 20px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.total-vendas {
+    font-size: 18px;
+    color: #fd7e14;
+    font-weight: bold;
+}
+
+.total-vendas span {
+    font-size: 24px;
+    color: #ed8934;
+    margin: 0 5px;
+}
+
+/* Centralizando os botões na página */
+.buttons {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os botões quebrem para outra linha */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 15px; /* Espaço entre os botões */
+    margin: 70px 0;
+}
+
+/* Ajustando os botões */
+.btn {
+    background-color: #c05600;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px; /* Ajusta a largura do botão */
+    text-decoration: none;
+}
+
+.btn img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    background-color: #8b4513;
+}
+

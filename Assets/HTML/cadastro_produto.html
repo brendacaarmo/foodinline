@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Food in Line</title>
+    <link rel="stylesheet" href="../CSS/cadastro_produto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Navegue</h2>
+            <nav>
+                <ul>
+                    <li><a href="home_logado.html">HOME</a></li>
+                    <li><a href="cardapio.html">Verificar Cardápio</a></li>
+                    <li><a href="vendas.html">Vendas</a></li>
+                    <li><a href="../HTML/cadastro_produto.html">Cadastrar Produto</a></li>
+                    <li><a href="fechar_loja.html">Fechar Loja</a></li>
+                    <li><a href="meu_cadastrp.html">Meu Cadastro</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botão de Deslogar -->
+            <a href="login.html" class="logout-btn">Sair</a>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="content">
+            <header class="header">
+                <img src="../../Imagens/Food in line logo fundo removido.png" alt="Food in Line">
+            </header>
+
+            <section class="dashboard">
+                <h1>Cadastrar Novo Produto:</h1>
+                <div class="form-container">
+                    <div class="image-upload">
+                        <img id="product-image" src="imagem_padrao.png" alt="Imagem do produto">
+                        <input type="file" id="image-input" accept="image/*" hidden>
+                        <button id="upload-btn">Adicionar Imagem</button>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <textarea id="descricao" name="descricao"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="categoria">Categoria</label>
+                            <select id="categoria" name="categoria">
+                                <option value="">Selecione</option>
+                                <option value="salgado">Salgado Assado</option>
+                                <option value="salgado frito">Salgado Frito</option>
+                                <option value="lanche natural">Lanche Natural</option>
+                                <option value="doce">Doce</option>
+                                <option value="bebida">Bebida</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="preco">Preço</label>
+                            <input type="text" id="preco" name="preco">
+                        </div>
+                        <div class="form-group">
+                            <label for="produto_ativo">Produto Ativo</label>
+                            <input type="checkbox" id="produto_ativo" name="produto_ativo">
+                        </div>
+                    </form>
+                </div>
+                <div class="button-container">
+                    <button class="btn-salvar">Salvar</button>
+                </div>
+            </section>
+            
+            
+        </main>
+    </div>
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>
