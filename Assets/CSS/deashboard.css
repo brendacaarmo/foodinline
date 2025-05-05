@@ -119,109 +119,21 @@ body {
     margin-bottom: 15px;
 }
 
-.form-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.dashboard {
+    background: white;
     padding: 20px;
-    padding: 0 80px;
-}
-
-/* Imagem do Produto */
-.image-upload {
-    text-align: center;
-}
-
-.image-upload img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border: 1px solid #ccc;
     border-radius: 10px;
-    display: block;
-    margin: 10px;
-    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
 }
 
-#upload-btn {
-    background-color: white;
+/* Título */
+.dashboard h1 {
+    font-size: 22px;
     color: #6c757d;
-    padding: 8px 12px;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin: 10px auto;
-    border-radius: 5px;
-    text-decoration: underline;
-}
-
-#upload-btn:hover {
-    color: #515457;
-}
-
-
-/* Estilização do formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-}
-
-.form-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #6c757d;
-}
 
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
-.form-group input[type="checkbox"] {
-    width: auto;
-    transform: scale(1.2); /* aumenta um pouco o tamanho */
-    margin-right: 8px;
-}
-
-.form-group label[for="produto_ativo"] {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-}
-
-
-/* Botão Salvar */
-.btn-salvar {
-    display: flex;
-    background-color: #b45f25;
-    color: white;
-    padding: 6px 70px;
-    font-size: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-salvar:hover {
-    background-color: #944d1c;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
 

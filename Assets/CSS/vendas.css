@@ -1,0 +1,235 @@
+/* Importando a fonte Lato */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #e9ecef;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    width: 100vw;
+}
+
+/* Sidebar fixa na esquerda */
+.sidebar {
+    width: 280px;
+    background-color: white;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    color: #fd7e14;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a::before {
+    content: "➤";
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de deslogar */
+.logout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #c05600;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Conteúdo principal */
+.content {
+    margin: 0 20px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+.header {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.header img {
+    max-width: 170px;
+    display: block;
+}
+
+/* Dashboard */
+.dashboard {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+}
+
+.dashboard h1 {
+    font-size: 22px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+/* Filtro de pedidos */
+.filtro-pedidos {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtro-pedidos label {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.filtro-pedidos select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+}
+
+
+
+/* Container lateral de conteúdo */
+.dashboard-content {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Lista de pedidos */
+.order-list {
+    flex: 2;
+}
+
+/* Cartão de pedido */
+.order-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.order-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.order-info h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.order-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Dashboard lateral com total de vendas */
+.sales-dashboard {
+    flex: 1;
+    background-color: #fff3e8;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.vendas-label {
+    font-size: 16px;
+    color: #d2691e;
+    margin-bottom: 8px;
+}
+
+.vendas-total {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d2691e;
+    margin-bottom: 20px;
+}
+
+/* Botão Dashboard */
+.dashboard-btn {
+    background-color: #b45f25;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.dashboard-btn img {
+    width: 60px;
+    margin-bottom: 8px;
+}
+
+.dashboard-btn:hover {
+    background-color: #8b4513;
+}

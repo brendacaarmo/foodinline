@@ -45,7 +45,6 @@ body {
     margin-left: 10px;
 }
 
-
 .sidebar ul li a {
     text-decoration: none;
     color: #6c757d;
@@ -63,7 +62,6 @@ body {
     text-decoration: underline;
 }
 
-
 /* Ajuste do botão de deslogar */
 .logout-btn {
     display: block;
@@ -76,7 +74,7 @@ body {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    margin-top: auto; /* Empurra para o final da sidebar */
+    margin-top: auto;
 }
 
 .logout-btn:hover {
@@ -87,20 +85,43 @@ body {
 .content {
     margin: 0 20px;
     padding: 20px;
-    width: calc(100% - 270px); /* Ocupa o espaço restante */
+    width: calc(100% - 270px);
     display: flex;
     flex-direction: column;
 }
 
 /* Cabeçalho */
-.header {
+
+.logo-status-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     margin-top: 30px;
     margin-bottom: 40px;
 }
 
-.header img {
+.logo-status-container img {
     max-width: 170px;
     display: block;
+}
+
+/* Estilo do status da loja */
+.status {
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status.aberto {
+    background-color: #28a745;
+    color: white;
+}
+
+.status.fechado {
+    background-color: #dc3545;
+    color: white;
 }
 
 /* Dashboard */
@@ -109,7 +130,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Para ocupar toda a largura disponível */
+    width: 100%;
 }
 
 .dashboard h1 {
@@ -133,10 +154,10 @@ body {
 /* Centralizando os botões na página */
 .buttons {
     display: flex;
-    flex-wrap: wrap; /* Permite que os botões quebrem para outra linha */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 15px; /* Espaço entre os botões */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     margin: 70px 0;
 }
 
@@ -155,7 +176,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 180px; /* Ajusta a largura do botão */
+    width: 180px;
     text-decoration: none;
 }
 
@@ -164,7 +185,19 @@ body {
     margin-bottom: 10px;
 }
 
+.icone-cadeado {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
 .btn:hover {
     background-color: #8b4513;
 }
 
+/* Estilo para o SweetAlert */
+.swal2-rounded {
+    border-radius: 10px !important;
+}

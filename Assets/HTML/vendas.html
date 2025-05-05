@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas</title>
+    <link rel="stylesheet" href="../CSS/vendas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Navegue</h2>
+            <nav>
+                <ul>
+                    <li><a href="home_logado.html">HOME</a></li>
+                    <li><a href="cardapio.html">Verificar Cardápio</a></li>
+                    <li><a href="vendas.html">Vendas</a></li>
+                    <li><a href="../HTML/cadastro_produto.html">Cadastrar Produto</a></li>
+                    <li><a href="meus_dados.html">Meus Dados</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botão de Deslogar -->
+            <a href="../../Index.html" class="logout-btn">Sair</a>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="content">
+            <header class="header">
+                <img src="../../Imagens/Food in line logo fundo removido.png" alt="Food in Line">
+            </header>
+
+            <section class="dashboard">
+                <h1>Vendas:</h1>
+                <div class="filtro-pedidos">
+                    <label for="filtro">Filtrar pedidos:</label>
+                    <select id="filtro" name="filtro">
+                        <option value="todos">Todos</option>
+                        <option value="mais-recentes">Mais recentes</option>
+                        <option value="maior-valor">Maior valor</option>
+                        <option value="menor-valor">Menor valor</option>
+                        <option value="menor-valor">Categoria</option>
+                    </select>
+                </div>
+                
+            
+                <div class="dashboard-content">
+                    <!-- Lista de pedidos -->
+                    <div class="order-list">
+                        <div class="order-card">
+                            <img src="../../Imagens/produto_exemplo.png" alt="Imagem do Produto">
+                            <div class="order-info">
+                                <h3>Número do Pedido</h3>
+                                <p>Valor do Pedido: <span>R$ 15,00</span></p>
+                            </div>
+                        </div>
+                        <div class="order-card">
+                            <img src="../../Imagens/produto_exemplo.png" alt="Imagem do Produto">
+                            <div class="order-info">
+                                <h3>Número do Pedido</h3>
+                                <p>Valor do Pedido: <span>R$ 15,00</span></p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Dashboard lateral -->
+                    <div class="sales-dashboard">
+                        <p class="vendas-label">Total de vendas:</p>
+                        <p class="vendas-total">R$29.345,70</p>
+                        <a href="dashboard.html" class="dashboard-btn"><img src="../../Imagens/icone_dashboard.png" alt="Dashboard ícone"/>Acessar Dashboard</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Produto</title>
-    <link rel="stylesheet" href="../CSS/cadastro_produto.css">
+    <title>Meus Dados</title>
+    <link rel="stylesheet" href="../CSS/meus_dados.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -34,49 +34,35 @@
             </header>
 
             <section class="dashboard">
-                <h1>Cadastrar Novo Produto:</h1>
+                <h1>Meus Dados Cadastrais:</h1>
                 <div class="form-container">
-                    <div class="image-upload">
-                        <img id="product-image" src="imagem_padrao.png" alt="Imagem do produto">
-                        <input type="file" id="image-input" accept="image/*" hidden>
-                        <button id="upload-btn">Adicionar Imagem</button>
-                    </div>
                     <form>
                         <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
                         </div>
                         <div class="form-group">
-                            <label for="descricao">Descrição</label>
-                            <textarea id="descricao" name="descricao"></textarea>
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username">
                         </div>
                         <div class="form-group">
-                            <label for="categoria">Categoria</label>
-                            <select id="categoria" name="categoria">
-                                <option value="">Selecione</option>
-                                <option value="salgado">Salgado Assado</option>
-                                <option value="salgado frito">Salgado Frito</option>
-                                <option value="lanche natural">Lanche Natural</option>
-                                <option value="doce">Doce</option>
-                                <option value="bebida">Bebida</option>
-                            </select>
+                            <label for="empresa">Nome da Empresa</label>
+                            <input type="text" id="empresa" name="empresa">
                         </div>
                         <div class="form-group">
-                            <label for="preco">Preço</label>
-                            <input type="text" id="preco" name="preco">
+                            <label for="senha">Senha</label>
+                            <input type="password" id="senha" name="senha">
                         </div>
                         <div class="form-group">
-                            <label for="produto_ativo">Produto Ativo</label>
-                            <input type="checkbox" id="produto_ativo" name="produto_ativo">
+                            <label for="confirmar-senha">Confirmação de Senha</label>
+                            <input type="password" id="confirmar-senha" name="confirmar-senha">
                         </div>
                     </form>
                 </div>
                 <div class="button-container">
-                    <button class="btn-salvar">Salvar</button>
+                    <button class="btn-salvar">Atualizar</button>
                 </div>
             </section>
-            
-            
         </main>
     </div>
     <script src="../JavaScript/script.js"></script>

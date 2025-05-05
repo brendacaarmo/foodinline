@@ -124,39 +124,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    padding: 0 80px;
-}
-
-/* Imagem do Produto */
-.image-upload {
-    text-align: center;
-}
-
-.image-upload img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    display: block;
-    margin: 10px;
-    border: none;
-}
-
-#upload-btn {
-    background-color: white;
-    color: #6c757d;
-    padding: 8px 12px;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin: 10px auto;
-    border-radius: 5px;
-    text-decoration: underline;
-}
-
-#upload-btn:hover {
-    color: #515457;
 }
 
 
@@ -213,6 +180,7 @@ form {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    margin-left: 20px;
 }
 
 .btn-salvar:hover {
@@ -221,7 +189,6 @@ form {
 
 .button-container {
     display: flex;
-    justify-content: center;
     margin-top: 20px;
 }
 
