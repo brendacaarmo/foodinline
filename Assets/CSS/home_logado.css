@@ -54,7 +54,7 @@ body {
 }
 
 .sidebar ul li a::before {
-    content: "➤";
+    content: "○";
     margin-right: 10px;
 }
 
