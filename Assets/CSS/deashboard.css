@@ -135,5 +135,25 @@ body {
     margin-bottom: 15px;
 }
 
+/* Estilização para o embed do Power BI */
+.dashboard-embed {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Proporção 16:9 */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    margin-top: 15px;
+}
+
+.dashboard-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
 
 
