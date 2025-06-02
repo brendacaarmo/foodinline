@@ -14,7 +14,7 @@ body {
 /* Container principal */
 .container {
     display: flex;
-    width: 100vw; /* Garante que ocupa toda a largura */
+    width: 100vw;
 }
 
 /* Sidebar fixa na esquerda */
@@ -22,17 +22,18 @@ body {
     width: 280px;
     background-color: white;
     padding: 20px;
-    height: 100vh; /* Ocupa toda a altura da tela */
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para o fim */
+    justify-content: space-between;
 }
 
-/* Estilização do título da sidebar */
 .sidebar h2 {
     color: #fd7e14;
     font-size: 20px;
     margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
 }
 
 /* Estilização da navegação */
@@ -43,8 +44,12 @@ body {
 .sidebar ul li {
     margin-bottom: 15px;
     margin-left: 10px;
+    transition: transform 0.2s ease;
 }
 
+.sidebar ul li:hover {
+    transform: translateX(5px);
+}
 
 .sidebar ul li a {
     text-decoration: none;
@@ -52,19 +57,26 @@ body {
     font-size: 14px;
     display: flex;
     align-items: center;
+    transition: color 0.3s ease;
 }
 
 .sidebar ul li a::before {
     content: "○";
     margin-right: 10px;
+    transition: all 0.3s ease;
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
+    color: #fd7e14;
+    text-decoration: none;
 }
 
+.sidebar ul li a:hover::before {
+    content: "●";
+    color: #fd7e14;
+}
 
-/* Ajuste do botão de deslogar */
+/* Botão de deslogar */
 .logout-btn {
     display: block;
     width: 100%;
@@ -76,18 +88,21 @@ body {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    margin-top: auto; /* Empurra para o final da sidebar */
+    margin-top: auto;
+    transition: all 0.3s ease;
 }
 
 .logout-btn:hover {
     background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Conteúdo principal */
 .content {
     margin: 0 20px;
     padding: 20px;
-    width: calc(100% - 270px); /* Ocupa o espaço restante */
+    width: calc(100% - 270px);
     display: flex;
     flex-direction: column;
 }
@@ -104,13 +119,17 @@ body {
 }
 
 /* Dashboard */
-/* Dashboard - Cadastro de Produto */
 .dashboard {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Para ocupar toda a largura disponível */
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.dashboard:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .dashboard h1 {
@@ -118,14 +137,6 @@ body {
     color: #6c757d;
     margin-bottom: 15px;
 }
-
-.form-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
 
 /* Estilização do formulário */
 form {
@@ -153,11 +164,20 @@ form {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #fd7e14;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(253, 126, 20, 0.2);
 }
 
 .form-group input[type="checkbox"] {
     width: auto;
-    transform: scale(1.2); /* aumenta um pouco o tamanho */
+    transform: scale(1.2);
     margin-right: 8px;
 }
 
@@ -167,7 +187,6 @@ form {
     gap: 10px;
     font-weight: 500;
 }
-
 
 /* Botão Salvar */
 .btn-salvar {
@@ -179,12 +198,14 @@ form {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     margin-left: 20px;
 }
 
 .btn-salvar:hover {
     background-color: #944d1c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .button-container {
@@ -192,3 +213,20 @@ form {
     margin-top: 20px;
 }
 
+/* Adicionando efeito hover para imagens */
+.header img {
+    transition: all 0.3s ease;
+}
+
+.header img:hover {
+    transform: scale(1.05);
+}
+
+/* Container do formulário */
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    transition: all 0.3s ease;
+}

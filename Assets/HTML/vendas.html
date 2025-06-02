@@ -29,9 +29,6 @@
         <!-- Conteúdo principal -->
         <main class="content">
             <header class="header">
-                <button class="menu-toggle" aria-label="Abrir/fechar menu">
-                    <span class="hamburger"></span>
-                </button>
                 <img src="../../Imagens/Food in line logo fundo removido.png" alt="Food in Line">
             </header>
 
@@ -51,20 +48,26 @@
                 
                 <div class="dashboard-content">
                     <!-- Lista de pedidos -->
-                    <div class="order-list">
-                        <div class="order-card" data-numero="1001">
-                            <img src="../../Imagens/produto_exemplo.png" alt="Imagem do Produto">
-                            <div class="order-info">
-                                <h3>#1001</h3>
-                                <p>Valor do Pedido: <span>R$ 15,00</span></p>
-                            </div>
+                    <div class="order-card" data-numero="1001">
+                        <div class="order-info">
+                            <h3>#1001</h3>
+                            <p>Código de Confirmação: <strong>1234</strong></p>
+                            <p>Valor do Pedido: <span>R$ 15,00</span></p>
                         </div>
-                        <div class="order-card" data-numero="1002">
-                            <img src="../../Imagens/produto_exemplo.png" alt="Imagem do Produto">
-                            <div class="order-info">
-                                <h3>#1002</h3>
-                                <p>Valor do Pedido: <span>R$ 25,50</span></p>
-                            </div>
+                        <div class="order-actions">
+                            <button class="btn-entregar">Entregar</button>
+                            <button class="btn-cancelar">Cancelar</button>
+                        </div>
+                    </div>
+                    <div class="order-card" data-numero="1249">
+                        <div class="order-info">
+                            <h3>#1002</h3>
+                            <p>Código de Confirmação: <strong>1249</strong></p>
+                            <p>Valor do Pedido: <span>R$ 8,90</span></p>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn-entregar">Entregar</button>
+                            <button class="btn-cancelar">Cancelar</button>
                         </div>
                     </div>
             

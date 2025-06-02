@@ -9,12 +9,14 @@
 /* Corpo da página */
 body {
     background-color: #e9ecef;
+    overflow-x: hidden;
 }
 
 /* Container principal */
 .container {
     display: flex;
-    width: 100vw; /* Garante que ocupa toda a largura */
+    width: 100vw;
+    position: relative;
 }
 
 /* Sidebar fixa na esquerda */
@@ -22,17 +24,26 @@ body {
     width: 280px;
     background-color: white;
     padding: 20px;
-    height: 100vh; /* Ocupa toda a altura da tela */
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para o fim */
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #eaeaea;
 }
 
-/* Estilização do título da sidebar */
 .sidebar h2 {
     color: #fd7e14;
     font-size: 20px;
     margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
 }
 
 /* Estilização da navegação */
@@ -43,8 +54,12 @@ body {
 .sidebar ul li {
     margin-bottom: 15px;
     margin-left: 10px;
+    transition: transform 0.2s ease;
 }
 
+.sidebar ul li:hover {
+    transform: translateX(5px);
+}
 
 .sidebar ul li a {
     text-decoration: none;
@@ -52,19 +67,26 @@ body {
     font-size: 14px;
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .sidebar ul li a::before {
     content: "○";
     margin-right: 10px;
+    transition: all 0.3s ease;
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
+    color: #fd7e14;
+    text-decoration: none;
 }
 
+.sidebar ul li a:hover::before {
+    content: "●";
+    color: #fd7e14;
+}
 
-/* Ajuste do botão de deslogar */
+/* Botão de deslogar */
 .logout-btn {
     display: block;
     width: 100%;
@@ -76,49 +98,46 @@ body {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    margin-top: auto; /* Empurra para o final da sidebar */
+    margin-top: auto;
+    transition: all 0.3s ease;
+    border: none;
 }
 
 .logout-btn:hover {
     background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Conteúdo principal */
 .content {
-    margin: 0 20px;
+    margin-left: 300px;
     padding: 20px;
-    width: calc(100% - 270px); /* Ocupa o espaço restante */
+    width: calc(100% - 300px);
     display: flex;
     flex-direction: column;
+    transition: all 0.3s ease;
+    min-height: 100vh;
 }
 
 /* Cabeçalho */
 .header {
     margin-top: 30px;
     margin-bottom: 40px;
+    transition: all 0.3s ease;
 }
 
 .header img {
     max-width: 170px;
     display: block;
+    transition: all 0.3s ease;
+}
+
+.header:hover img {
+    transform: scale(1.05);
 }
 
 /* Dashboard */
-/* Dashboard - Cadastro de Produto */
-.dashboard {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Para ocupar toda a largura disponível */
-}
-
-.dashboard h1 {
-    font-size: 20px;
-    color: #6c757d;
-    margin-bottom: 15px;
-}
-
 .dashboard {
     background: white;
     padding: 20px;
@@ -126,24 +145,39 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     position: relative;
+    transition: all 0.3s ease;
 }
 
-/* Título */
+.dashboard:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .dashboard h1 {
     font-size: 22px;
     color: #6c757d;
     margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.dashboard:hover h1 {
+    color: #fd7e14;
 }
 
 /* Estilização para o embed do Power BI */
 .dashboard-embed {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* Proporção 16:9 */
+    padding-top: 56.25%;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-embed:hover {
+    box-shadow: 0 6px 12px rgba(253, 126, 20, 0.2);
+    transform: translateY(-3px);
 }
 
 .dashboard-embed iframe {
@@ -154,6 +188,14 @@ body {
     height: 100%;
     border: none;
     border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
+.dashboard-embed:hover iframe {
+    filter: brightness(1.05);
+}
 
+/* Efeitos adicionais */
+*:hover {
+    transition: all 0.3s ease !important;
+}
